@@ -6,7 +6,6 @@ import com.webApp.webApp.service.UserService;
 import com.webApp.webApp.utils.LogConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

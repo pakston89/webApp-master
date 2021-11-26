@@ -1,7 +1,6 @@
 package com.webApp.webApp.service;
 
 import com.webApp.webApp.model.ExpenseType;
-
 import java.util.List;
 
 public interface ExpenseTypeService {

@@ -3,7 +3,6 @@ package com.webApp.webApp.repository;
 import com.webApp.webApp.model.ExpenseType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
 import java.util.List;
 
 public interface ExpenseTypeRepository extends JpaRepository<ExpenseType, Integer> {

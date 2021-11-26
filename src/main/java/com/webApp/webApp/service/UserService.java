@@ -1,7 +1,6 @@
 package com.webApp.webApp.service;
 
 import com.webApp.webApp.model.User;
-
 import java.util.List;
 
 public interface UserService {
