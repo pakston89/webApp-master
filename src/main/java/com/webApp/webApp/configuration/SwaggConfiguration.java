@@ -9,7 +9,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
-@EnableSwagger2 //Swagger sirve para testear nuestros servicios Rest
+@EnableSwagger2
 public class SwaggConfiguration {
 	
 	@Bean
