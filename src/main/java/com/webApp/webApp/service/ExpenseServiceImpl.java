@@ -70,6 +70,10 @@ public class ExpenseServiceImpl implements ExpenseService {
             expenseToUpdate.setExpenseTypeId(expense.getExpenseTypeId());
         }
 
+        if(expense.getExpenseTypeId() != null) {
+            expenseToUpdate.setApprovalStatus(expense.getApprovalStatus());
+        }
+
         if(expense.getUserId() != null) {
             expenseToUpdate.setUserId(expense.getUserId());
         }
