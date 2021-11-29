@@ -39,6 +39,7 @@ public class ExpenseServiceImpl implements ExpenseService {
       return expenseRepository.findByDescription(description);
     }
 
+
     @Override
     public void addExpense(Expense expense){
         Double amountInEuros = CurrencyConversion.convertAmountToEuros(expense.getAmount(), expense.getCurrency());

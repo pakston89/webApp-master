@@ -39,6 +39,12 @@ public class CurrencyConversion {
         return rate;
     }
 
+    /**
+     * Method to convert any currency to Euros
+     * @param amountToConvert amount to convert
+     * @param fromCurrency from specific currency
+     * @return amount converted to Euros
+     */
     public static Double convertAmountToEuros(Double amountToConvert, String fromCurrency){
         Double amountInEuros = amountToConvert / CurrencyExchangeResponseMapper(fromCurrency);
         Double amountInEurosRounded = Math.round(amountInEuros * 100.0) / 100.0;
