@@ -1,5 +1,6 @@
 package com.webApp.webApp.model;
 
+import com.webApp.webApp.enums.ApprovalStatus;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,6 +22,9 @@ public class Expense {
 
     @Column(name = "expense_type_id")
     private Integer expenseTypeId;
+
+    @Column(name = "approval_status")
+    private ApprovalStatus approvalStatus;
 
     @Column(name = "amount")
     private Double amount;
