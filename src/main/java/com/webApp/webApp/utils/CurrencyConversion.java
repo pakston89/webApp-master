@@ -30,7 +30,7 @@ public class CurrencyConversion {
     }
 
     /**
-     * Method to map currency exchange service response and gate exchange rate
+     * Method for mappin currency exchange service response and getting exchange rate
      * @param fromCurrency
      * @return exchange rate
      */
@@ -49,7 +49,7 @@ public class CurrencyConversion {
     }
 
     /**
-     * Method to convert any currency to Euros
+     * Method for converting any currency to Euros
      * @param amountToConvert amount to convert
      * @param fromCurrency from specific currency
      * @return amount converted to Euros
