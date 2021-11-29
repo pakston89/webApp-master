@@ -9,7 +9,11 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class CurrencyConversion {
-
+    /**
+     * Method for requesting currency exchange service
+     * @param fromCurrency
+     * @return response from service
+     */
     public static HttpResponse<String> RequestToCurrencyExchange(String fromCurrency){
         String url = String.format("http://data.fixer.io/api/latest?access_key=6eb751287d171bb40c9e732ded8c71c7&symbols=%s", fromCurrency);
         HttpResponse<String> response = null;
@@ -25,6 +29,11 @@ public class CurrencyConversion {
         return response;
     }
 
+    /**
+     * Method to map currency exchange service response and gate exchange rate
+     * @param fromCurrency
+     * @return exchange rate
+     */
     public static Double CurrencyExchangeResponseMapper (String fromCurrency){
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = null;
