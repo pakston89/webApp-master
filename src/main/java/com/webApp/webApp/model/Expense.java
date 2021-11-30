@@ -1,15 +1,10 @@
 package com.webApp.webApp.model;
 
 import com.webApp.webApp.enums.ApprovalStatus;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "expenses")
-@Getter @Setter
-@ToString
 public class Expense {
 
     @Id
@@ -46,5 +41,74 @@ public class Expense {
         this.amount = amount;
         this.currency = currency;
         this.userId = userId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getExpenseTypeId() {
+        return expenseTypeId;
+    }
+
+    public void setExpenseTypeId(Integer expenseTypeId) {
+        this.expenseTypeId = expenseTypeId;
+    }
+
+    public ApprovalStatus getApprovalStatus() {
+        return approvalStatus;
+    }
+
+    public void setApprovalStatus(ApprovalStatus approvalStatus) {
+        this.approvalStatus = approvalStatus;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    @Override
+    public String toString() {
+        return "Expense{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", expenseTypeId=" + expenseTypeId +
+                ", approvalStatus=" + approvalStatus +
+                ", amount=" + amount +
+                ", currency='" + currency + '\'' +
+                ", userId=" + userId +
+                '}';
     }
 }
