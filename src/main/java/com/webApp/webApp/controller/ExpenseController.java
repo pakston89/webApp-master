@@ -64,4 +64,10 @@ public class ExpenseController {
         LogConstants.ExpenseControllerLOG.info("Method: updateExpenseDescription -- Params: " + expenseDto.toString());
         expenseServiceImpl.updateExpenseDescription(expenseMapper.expenseDtoToExpense(expenseDto));
     }
+
+    @PatchMapping
+    public void updateExpenseApprovalStatus(@RequestBody ExpenseDto expenseDto) {
+        LogConstants.ExpenseControllerLOG.info("Method: updateExpenseApprovalStatus -- Params: " + expenseDto.toString());
+        expenseServiceImpl.updateExpenseApprovalStatus(expenseMapper.expenseDtoToExpense(expenseDto));
+    }
 }
