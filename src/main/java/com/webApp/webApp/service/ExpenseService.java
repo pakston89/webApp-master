@@ -19,4 +19,6 @@ public interface ExpenseService {
     public void updateExpense(Expense expense) throws JsonProcessingException;
 
     public void updateExpenseDescription(Expense expense);
+
+    public void updateExpenseApprovalStatus(Expense expense);
 }

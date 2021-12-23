@@ -87,8 +87,18 @@ public class ExpenseServiceImpl implements ExpenseService {
 
         if(!Strings.isNullOrEmpty(expense.getDescription())) {
             expenseToUpdate.setDescription(expense.getDescription());
+            expenseRepository.saveAndFlush(expenseToUpdate);
         }
+    }
 
-        expenseRepository.saveAndFlush(expenseToUpdate);
+    @Override
+    public void updateExpenseApprovalStatus(Expense expense) {
+
+        Expense expenseToUpdate = expenseRepository.findByID(expense.getId());
+
+        if (expense.getApprovalStatus() != null) {
+            expenseToUpdate.setApprovalStatus(expense.getApprovalStatus());
+            expenseRepository.saveAndFlush(expenseToUpdate);
+        }
     }
 }
